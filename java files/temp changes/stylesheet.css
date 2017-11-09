@@ -1,0 +1,113 @@
+/* Set the default background colour */
+.root {
+    -fx-background: #000c11;
+}
+
+/* Set all VBox layout defaults (left panel & loading UI) */
+VBox {
+    
+    -fx-alignment: center;
+    -fx-padding: 10;
+    -fx-pref-width: 380;
+}
+
+/* Hiding scrollpane background to remove white/blue border */
+ScrollPane {
+    -fx-background-insets: -1;
+}
+
+/* Background gradient for the left window panel */
+.leftPanel {
+    
+    -fx-background-color: 
+        linear-gradient(to right, #000c11 0%, #000000 10%, #000000 90%, #000c11 100%);
+}
+
+/* General Label styles & specific name and title styles */
+Label {
+    -fx-text-fill: #b59209;
+    -fx-font-family: 'Helvetica', Arial, sans-serif;
+    -fx-font-size: 15;
+}
+
+#nameLabel {
+    -fx-text-fill: linear-gradient(#ffd147, #3d2e00);
+    -fx-font-size: 35;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, #443703, 1,0,2,2);
+}
+
+#titleLabel {
+    -fx-font-style: italic;
+    -fx-font-weight: bold;
+}
+
+/* Button styles for normal, hovered & pressed states */
+Button {
+    -fx-text-fill: #b59209;
+    -fx-font-family: 'Helvetica', Arial, sans-serif;
+    -fx-font-size: 13;
+    -fx-background-color: 
+        linear-gradient(#ffd147, #3d2e00),
+        #01131e,
+        linear-gradient(#082d42 0%, #041b28 15%, #041b28 85%, #082d42 100%);
+    -fx-background-insets: 0,1,4;
+    -fx-padding: 10;
+}
+
+.button:hover {
+    -fx-background-color: 
+        linear-gradient(#ffd147, #3d2e00),
+        #02263d,
+        linear-gradient(#0b3e5b 0%, #073047 15%, #073047 85%, #0b3e5b 100%);
+}
+
+.button:pressed {
+    -fx-background-color: 
+        linear-gradient(#ffd147, #3d2e00),
+        #00090f,
+        linear-gradient(#051f2d 0%, #021119 15%, #021119 85%, #051f2d 100%);
+}
+
+/* Scroll bar track and thumb styles */
+.scroll-bar .track {
+    -fx-background-color: #00070a;
+    -fx-background-radius: 0em;
+    -fx-border-color: transparent;
+    -fx-border-radius: 2em;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color:
+        #01131e,
+        linear-gradient(to right, #041b28 0%, #082d42 20%, #082d42 80%, #041b28 100%);
+    -fx-background-insets: 0, 2;
+}
+.scroll-bar .thumb:pressed {
+    -fx-background-color:
+        #00090f,
+        linear-gradient(to right, #021119 0%, #051f2d 20%, #051f2d 80%, #021119 100%);
+    -fx-background-insets: 0, 2;
+}
+
+/* Remove the buttons and arrows on the scrollbar */
+.scroll-bar .increment-button, .scroll-bar .decrement-button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0em;
+    -fx-padding: 0 20 0 0;
+}
+
+.scroll-bar .increment-arrow, .scroll-bar .decrement-arrow {
+    -fx-shape: " ";
+    -fx-padding: 0;
+}
+
+/* progress bar track and bar styles */
+.progress-bar .track {
+    -fx-background-color: #041b28;
+}
+
+.progress-bar .bar {
+    -fx-background-color:
+        linear-gradient(#59460c, #ffd147, #59460c);
+}

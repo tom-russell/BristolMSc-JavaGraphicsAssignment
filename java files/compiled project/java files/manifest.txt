@@ -1,0 +1,2 @@
+Main-Class: LoLStatViewer
+Class-Path: libs/json-20160810.jar
